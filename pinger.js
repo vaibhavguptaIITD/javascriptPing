@@ -35,7 +35,7 @@ $(function () {
                 }
             },
             title: {
-                text: 'Live random data'
+                text: 'Live internet ping'
             },
             xAxis: {
                 type: 'datetime',
@@ -43,7 +43,7 @@ $(function () {
             },
             yAxis: {
                 title: {
-                    text: 'Value'
+                    text: 'Response time'
                 },
                 plotLines: [{
                     value: 0,
@@ -70,15 +70,3 @@ $(function () {
             }]
         });
 });
-
-function Pinger_ping(ip, callback) {
-
-  var startTime = (new Date()).getTime();
-  var responseTime = 0;
-  var img = new Image();
-  img.onload = function(){
-    responseTime = (new Date()).getTime() - startTime;
-  };
-  img.src = "http://"+ip;
-  return responseTime;
-}
