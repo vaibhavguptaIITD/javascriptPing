@@ -65,7 +65,7 @@ $(function () {
                 enabled: false
             },
             series: [{
-                name: 'Random data',
+                name: 'Response time',
                 data: []
             }]
         });
